@@ -27,9 +27,15 @@ class LibraryTest {
         boolean expected2 = false;
         boolean computed3 = lib.isEven(2);
         boolean expected3 = true;
+        boolean computed2b = lib.isEven(-1);
+        boolean expected2b = false;
+        boolean computed3b = lib.isEven(-2);
+        boolean expected3b = true;
         assertEquals(expected1, computed1);
         assertEquals(expected2, computed2);
         assertEquals(expected3, computed3);
+        assertEquals(expected2b, computed2b);
+        assertEquals(expected3b, computed3b);
     }
 
     // a simple all-in-one test
@@ -40,7 +46,13 @@ class LibraryTest {
             {0, 0, 0},
             {0, 1, 1},
             {2, 0, 2},
-            {3, 4, 7}
+            {3, 4, 7},
+            {2, -2, 0},
+            {-3, 3, 0},
+            {2, -3, -1},
+            {-3, 2, -1},
+            {4, -3, 1},
+            {-3, 4, 1}
         };
         for (int i = 0; i < inputs.length; i++) {
             int input1 = inputs[i][0];

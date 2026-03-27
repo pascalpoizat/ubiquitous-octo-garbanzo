@@ -23,6 +23,8 @@ class TestSuite1 {
         assertEquals(0, lib.mul(0, 0));
         assertEquals(0, lib.mul(0, 1));
         assertEquals(0, lib.mul(1, 0));
+        assertEquals(0, lib.mul(0, -1));
+        assertEquals(0, lib.mul(-1, 0));
     }
 
     @Test
@@ -30,12 +32,20 @@ class TestSuite1 {
         assertEquals(1, lib.mul(1,1));
         assertEquals(2, lib.mul(2,1));
         assertEquals(2, lib.mul(1,2));
+        assertEquals(-2, lib.mul(-2,1));
+        assertEquals(-2, lib.mul(1,-2));
     }
 
     @Test
     void other_cases() {
     assertEquals(12, lib.mul(3, 4));
     assertEquals(12, lib.mul(4, 3));
+    assertEquals(12, lib.mul(-3, -4));
+    assertEquals(12, lib.mul(-4, -3));
+    assertEquals(-12, lib.mul(-3, 4));
+    assertEquals(-12, lib.mul(-4, 3));
+    assertEquals(-12, lib.mul(3, -4));
+    assertEquals(-12, lib.mul(4, -3));
     }
 
 }
