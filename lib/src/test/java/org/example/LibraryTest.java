@@ -3,5 +3,32 @@
  */
 package org.example;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 class LibraryTest {
+
+    private Library lib;
+
+    @BeforeEach
+    public void setup() {
+        lib = new Library();
+    }
+
+    // a simple all-in-one test
+    // with tested method name in its name
+    @Test
+    public void testIsEven() {
+        boolean computed1 = lib.isEven(0);
+        boolean expected1 = true;
+        boolean computed2 = lib.isEven(1);
+        boolean expected2 = false;
+        boolean computed3 = lib.isEven(2);
+        boolean expected3 = true;
+        assertEquals(expected1, computed1);
+        assertEquals(expected2, computed2);
+        assertEquals(expected3, computed3);
+    }
 }
