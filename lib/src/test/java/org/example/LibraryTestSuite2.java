@@ -7,7 +7,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class TestSuite2 {
+class LibraryTestSuite2 {
   
     private Library lib;
 
