@@ -22,8 +22,10 @@ public class Library {
     // not detected by the tests
     public int sum(List<Integer> numbers) {
         int rtr = 0;
-        for (int i = 0; i < numbers.size(); i++) {
-            rtr += numbers.get(i);
+        if (numbers != null) {
+            for (int i = 0; i < numbers.size(); i++) {
+                rtr += numbers.get(i);
+            }
         }
         return rtr;
     }

@@ -26,4 +26,9 @@ class LibrarySuite2Tests {
         assertEquals(6, lib.sum(List.of(1,2,3)));
     }
 
+    @Test
+    void testIssue1() {
+        assertEquals(0, lib.sum(null));
+    }
+
 }
