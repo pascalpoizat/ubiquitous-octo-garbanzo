@@ -5,6 +5,10 @@ package org.example;
 
 public class Library {
     public boolean isEven(int n) {
-        return n%2 == 0;
+        return n % 2 == 0;
+    }
+
+    public int add(int a, int b) {
+        return a + b;
     }
 }

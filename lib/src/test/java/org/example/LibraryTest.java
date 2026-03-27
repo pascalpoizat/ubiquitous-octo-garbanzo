@@ -31,4 +31,23 @@ class LibraryTest {
         assertEquals(expected2, computed2);
         assertEquals(expected3, computed3);
     }
+
+    // a simple all-in-one test
+    // with a loop for testing multiple values
+    @Test
+    public void testAdd() {
+        int[][] inputs = new int[][]{
+            {0, 0, 0},
+            {0, 1, 1},
+            {2, 0, 2},
+            {3, 4, 7}
+        };
+        for (int i = 0; i < inputs.length; i++) {
+            int input1 = inputs[i][0];
+            int input2 = inputs[i][1];
+            int expected = inputs[i][2];
+            int computed = lib.add(input1, input2);
+            assertEquals(expected, computed);
+        }
+    }
 }
