@@ -3,6 +3,8 @@
  */
 package org.example;
 
+import java.util.List;
+
 public class Library {
     public boolean isEven(int n) {
         return n % 2 == 0;
@@ -14,6 +16,16 @@ public class Library {
 
     public int mul(int a, int b) {
         return a * b;
+    }
+
+    // this is an incorrect implementation
+    // not detected by the tests
+    public int sum(List<Integer> numbers) {
+        int rtr = 0;
+        for (int i = 0; i < numbers.size(); i++) {
+            rtr += numbers.get(i);
+        }
+        return rtr;
     }
 
 }
