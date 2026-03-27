@@ -13,14 +13,14 @@ class LibraryTest {
     private Library lib;
 
     @BeforeEach
-    public void setup() {
+    void setup() {
         lib = new Library();
     }
 
     // a simple all-in-one test
     // with tested method name in its name
     @Test
-    public void testIsEven() {
+    void testIsEven() {
         boolean computed1 = lib.isEven(0);
         boolean expected1 = true;
         boolean computed2 = lib.isEven(1);
@@ -35,7 +35,7 @@ class LibraryTest {
     // a simple all-in-one test
     // with a loop for testing multiple values
     @Test
-    public void testAdd() {
+    void testAdd() {
         int[][] inputs = new int[][]{
             {0, 0, 0},
             {0, 1, 1},
